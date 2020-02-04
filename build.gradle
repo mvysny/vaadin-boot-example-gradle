@@ -66,3 +66,15 @@ test {
         exceptionFormat = "FULL"
     }
 }
+
+def zip = task zip(type: Zip) {
+    from("src/main/scripts")
+    into("libs") {
+        from(configurations.runtime.allArtifacts.files)
+        from(configurations.runtime)
+    }
+}
+
+artifacts {
+    archives(zip)
+}

@@ -37,15 +37,15 @@ To package in production mode:
 1. `./gradle vaadinBuildFrontend build`
 
 The project packages itself as a zip file with dependencies. The file is
-in `build/libs/vaadin14-embedded-jetty-gradle-1.0-SNAPSHOT-zip.zip`
+in `build/distributions/vaadin14-embedded-jetty-gradle.zip`
 
 ## Running in production mode
 
 To build&run the zip file:
 
 1. `./gradle vaadinBuildFrontend build`
-2. `cd build/libs/`
-3. `unzip vaadin14-embedded-jetty-1.0-SNAPSHOT-zip.zip`
+2. `cd build/distributions/`
+3. `unzip vaadin14-embedded-jetty-gradle.zip`
 4. `./run`
 
 Head to [localhost:8080/](http://localhost:8080).
