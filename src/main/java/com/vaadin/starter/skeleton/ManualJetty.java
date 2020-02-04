@@ -10,7 +10,6 @@ import org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainer
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Arrays;
 
 /**
  * Run {@link #main(String[])} to launch your app in Embedded Jetty.
@@ -56,7 +55,7 @@ public final class ManualJetty {
 
         System.out.println("\n\n=================================================\n\n" +
         "Please open http://localhost:" + port + " in your browser\n\n" +
-        "If you see the 'Unable to determine mode of operation' exception, just kill me and run `mvn -C clean package`\n\n" +
+        "If you see the 'Unable to determine mode of operation' exception, just kill me and run `./gradlew vaadinPrepareFrontend`\n\n" +
         "=================================================\n\n");
     }
 
@@ -90,4 +89,3 @@ public final class ManualJetty {
         return Resource.newResource(webRoot);
     }
 }
-
