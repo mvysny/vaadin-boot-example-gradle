@@ -11,6 +11,10 @@ demoes packaging itself into a zip file containing
 a list of jars and a runner script. See "Packaging for production" below
 for more details.
 
+The [Vaadin 14 Gradle Plugin](https://github.com/vaadin/vaadin-gradle-plugin)
+is used to package all JavaScript dependencies via npm+webpack. See the Plugin
+home page for more details.
+
 ## Developing
 
 Clone this github repository and import the project to the IDE of your choice
