@@ -1,0 +1,68 @@
+// later on we will be able to get rid of this buildscript{} block and simply include
+// the plugin via id("com.vaadin")
+buildscript {
+    repositories {
+        gradlePluginPortal()
+        // pre-releases from Vaadin:
+        maven {
+            url "https://repo.vaadin.com/nexus/content/repositories/vaadin-prereleases-201912/"
+        }
+    }
+    dependencies {
+        classpath("com.vaadin:vaadin-gradle-plugin:0.3.0")
+    }
+}
+
+plugins {
+    id 'java'
+//    id("com.vaadin")  // uncomment when the plugin is published in the Gradle plugin repository
+}
+
+apply plugin: "com.vaadin"
+
+defaultTasks("clean", "vaadinBuildFrontend", "build")
+
+def jettyVersion = "9.4.20.v20190813"
+
+repositories {
+    jcenter()
+}
+
+// example of how to configure the Gradle Vaadin Plugin
+vaadin {
+    optimizeBundle = true
+}
+
+dependencies {
+    // Vaadin 14
+    compile("com.vaadin:vaadin-core:14.1.16") {
+//         Webjars are only needed when running in Vaadin 13 compatibility mode
+        ["com.vaadin.webjar", "org.webjars.bowergithub.insites",
+         "org.webjars.bowergithub.polymer", "org.webjars.bowergithub.polymerelements",
+         "org.webjars.bowergithub.vaadin", "org.webjars.bowergithub.webcomponents"]
+                .forEach { group -> exclude(group: group) }
+    }
+
+    compile("javax.servlet:javax.servlet-api:3.1.0")
+    compile("org.eclipse.jetty:jetty-continuation:${jettyVersion}")
+    compile("org.eclipse.jetty:jetty-server:${jettyVersion}")
+    compile("org.eclipse.jetty.websocket:websocket-server:${jettyVersion}")
+    compile("org.eclipse.jetty.websocket:javax-websocket-server-impl:${jettyVersion}") {
+        exclude(module: "javax.websocket-client-api")
+    }
+
+    // logging
+    // currently we are logging through the SLF4J API to SLF4J-Simple. See src/main/resources/simplelogger.properties file for the logger configuration
+    compile("org.slf4j:slf4j-simple:1.7.30")
+
+    // testing
+    testCompile("com.github.mvysny.kaributesting:karibu-testing-v10:1.1.19")
+    testCompile("org.junit.jupiter:junit-jupiter-engine:5.5.2")
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        exceptionFormat = "FULL"
+    }
+}
