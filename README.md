@@ -15,6 +15,23 @@ The [Vaadin 14 Gradle Plugin](https://github.com/vaadin/vaadin-gradle-plugin)
 is used to package all JavaScript dependencies via npm+webpack. See the Plugin
 home page for more details.
 
+# Preparing Environment
+
+The Vaadin 14 build requires node.js and npm. You can either use the Vaadin Gradle plugin to install it for
+you (the `vaadinPrepareNode` task, handy for the CI), or you can install it to your OS:
+
+* Windows: [node.js Download site](https://nodejs.org/en/download/) - use the .msi 64-bit installer
+* Linux: `sudo apt install npm`
+
+To make Vaadin Gradle plugin install node.js+npm for you, just run the following command
+in the project's sources (you only need to run this command once):
+
+```
+./gradlew vaadinPrepareNode
+```
+
+Also make sure that you have Java 8 (or higher) JDK installed.
+
 ## Developing
 
 Clone this github repository and import the project to the IDE of your choice
@@ -38,7 +55,7 @@ served from the jar itself, and therefore it needs to reside in `src/main/resour
 
 To package in production mode:
 
-1. `./gradle vaadinBuildFrontend build`
+1. `./gradle build -Pvaadin.productionMode`
 
 The project packages itself as a zip file with dependencies. The file is
 in `build/distributions/vaadin14-embedded-jetty-gradle.zip`
@@ -47,12 +64,18 @@ in `build/distributions/vaadin14-embedded-jetty-gradle.zip`
 
 To build&run the zip file:
 
-1. `./gradle vaadinBuildFrontend build`
+1. `./gradle build -Pvaadin.productionMode`
 2. `cd build/distributions/`
 3. `unzip vaadin14-embedded-jetty-gradle.zip`
 4. `./run`
 
 Head to [localhost:8080/](http://localhost:8080).
+
+If you don't have node installed in your CI environment, you can use Vaadin plugin to download node.js for you beforehand:
+
+```bash
+./gradlew clean vaadinPrepareNode build -Pvaadin.productionMode
+```
 
 ## About The Project
 

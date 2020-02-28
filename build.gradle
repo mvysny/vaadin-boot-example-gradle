@@ -1,19 +1,14 @@
 plugins {
     id 'java'
-    id 'com.vaadin' version '0.5.0'
+    id 'com.vaadin' version '0.6.0'
 }
 
-defaultTasks("clean", "vaadinBuildFrontend", "build")
+defaultTasks("clean", "build")
 
 def jettyVersion = "9.4.20.v20190813"
 
 repositories {
     jcenter()
-}
-
-// example of how to configure the Gradle Vaadin Plugin
-vaadin {
-    optimizeBundle = true
 }
 
 dependencies {
