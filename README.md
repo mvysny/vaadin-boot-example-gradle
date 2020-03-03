@@ -35,13 +35,20 @@ Also make sure that you have Java 8 (or higher) JDK installed.
 ## Developing
 
 Clone this github repository and import the project to the IDE of your choice
-as a Gradle project. You need to have Java JDK 8+ installed.
+as a Gradle project.
+
+To run quickly from the command-line in development mode, just run `./gradlew run` -
+your app will be running on
+[http://localhost:8080](http://localhost:8080).
+
+To run the app from your IDE:
 
 1. Import the project into your IDE
 2. Run `./gradle vaadinPrepareFrontend` in the project, to configure Vaadin for npm mode.
 3. Run/Debug the `ManualJetty` class as an application (run the `main()` method).
    The app will use npm to download all javascript libraries (will take a long time)
    and will start in development mode.
+4. Your app will be running on [http://localhost:8080](http://localhost:8080).
    
 See [ManualJetty.java](src/main/java/com/vaadin/starter/skeleton/ManualJetty.java)
 for details on how Jetty is configured for embedded mode.
