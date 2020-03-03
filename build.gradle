@@ -5,7 +5,7 @@ plugins {
 
 defaultTasks("clean", "build")
 
-def jettyVersion = "9.4.20.v20190813"
+def jettyVersion = "9.4.27.v20200227"
 
 repositories {
     jcenter()
