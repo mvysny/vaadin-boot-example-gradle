@@ -6,7 +6,7 @@ plugins {
 
 defaultTasks("clean", "build")
 
-def jettyVersion = "9.4.27.v20200227"
+def jettyVersion = "9.4.28.v20200408"
 
 repositories {
     jcenter()
@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
     // Vaadin 14
-    compile("com.vaadin:vaadin-core:14.1.16") {
+    compile("com.vaadin:vaadin-core:14.1.25") {
 //         Webjars are only needed when running in Vaadin 13 compatibility mode
         ["com.vaadin.webjar", "org.webjars.bowergithub.insites",
          "org.webjars.bowergithub.polymer", "org.webjars.bowergithub.polymerelements",
@@ -35,7 +35,7 @@ dependencies {
     compile("org.slf4j:slf4j-simple:1.7.30")
 
     // testing
-    testCompile("com.github.mvysny.kaributesting:karibu-testing-v10:1.1.19")
+    testCompile("com.github.mvysny.kaributesting:karibu-testing-v10:1.1.23")
     testCompile("org.junit.jupiter:junit-jupiter-engine:5.6.0")
 }
 

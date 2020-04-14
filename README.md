@@ -4,7 +4,7 @@
 # Vaadin 14 npm+webpack running in Embedded Jetty using Gradle
 
 A demo project showing the possibility of running a Vaadin 14 app from an
-embedded Jetty, as a simple `main()` method.
+embedded Jetty, as a simple `main()` method. Sources are in Java only.
 
 Both the development and production modes are supported. Also, the project
 demoes packaging itself into a zip file containing
@@ -49,7 +49,7 @@ To run the app from your IDE:
    The app will use npm to download all javascript libraries (will take a long time)
    and will start in development mode.
 4. Your app will be running on [http://localhost:8080](http://localhost:8080).
-   
+
 See [ManualJetty.java](src/main/java/com/vaadin/starter/skeleton/ManualJetty.java)
 for details on how Jetty is configured for embedded mode.
 
