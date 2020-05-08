@@ -15,6 +15,9 @@ The [Vaadin 14 Gradle Plugin](https://github.com/vaadin/vaadin-gradle-plugin)
 is used to package all JavaScript dependencies via npm+webpack. See the Plugin
 home page for more details.
 
+> Info: Eclipse+BuildShip may need a workaround in order for this project to work,
+> please see [this vaadin thread](https://vaadin.com/forum/thread/18241436) for more info.
+
 # Preparing Environment
 
 The Vaadin 14 build requires node.js and npm. You can either use the Vaadin Gradle plugin to install it for
