@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'com.vaadin' version '0.6.0'
+    id 'com.vaadin' version '0.7.0'
 }
 
 defaultTasks("clean", "build")
@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
     // Vaadin 14
-    compile("com.vaadin:vaadin-core:14.1.25") {
+    implementation("com.vaadin:vaadin-core:14.2.0") {
 //         Webjars are only needed when running in Vaadin 13 compatibility mode
         ["com.vaadin.webjar", "org.webjars.bowergithub.insites",
          "org.webjars.bowergithub.polymer", "org.webjars.bowergithub.polymerelements",
@@ -22,20 +22,20 @@ dependencies {
                 .forEach { group -> exclude(group: group) }
     }
 
-    compile("javax.servlet:javax.servlet-api:3.1.0")
-    compile("org.eclipse.jetty:jetty-continuation:${jettyVersion}")
-    compile("org.eclipse.jetty:jetty-server:${jettyVersion}")
-    compile("org.eclipse.jetty.websocket:websocket-server:${jettyVersion}")
-    compile("org.eclipse.jetty.websocket:javax-websocket-server-impl:${jettyVersion}") {
+    implementation("javax.servlet:javax.servlet-api:3.1.0")
+    implementation("org.eclipse.jetty:jetty-continuation:${jettyVersion}")
+    implementation("org.eclipse.jetty:jetty-server:${jettyVersion}")
+    implementation("org.eclipse.jetty.websocket:websocket-server:${jettyVersion}")
+    implementation("org.eclipse.jetty.websocket:javax-websocket-server-impl:${jettyVersion}") {
         exclude(module: "javax.websocket-client-api")
     }
 
     // logging
     // currently we are logging through the SLF4J API to SLF4J-Simple. See src/main/resources/simplelogger.properties file for the logger configuration
-    compile("org.slf4j:slf4j-simple:1.7.30")
+    implementation("org.slf4j:slf4j-simple:1.7.30")
 
     // testing
-    testCompile("com.github.mvysny.kaributesting:karibu-testing-v10:1.1.23")
+    testCompile("com.github.mvysny.kaributesting:karibu-testing-v10:1.1.24")
     testCompile("org.junit.jupiter:junit-jupiter-engine:5.6.0")
 }
 
@@ -60,4 +60,8 @@ artifacts {
 
 application {
     mainClassName = "com.vaadin.starter.skeleton.ManualJetty"
+}
+
+vaadin {
+    pnpmEnable = true
 }
