@@ -49,8 +49,8 @@ test {
 def zip = task zip(type: Zip) {
     from("src/main/scripts")
     into("libs") {
-        from(configurations.runtime.allArtifacts.files)
-        from(configurations.runtime)
+        from(configurations.runtimeClasspath.allArtifacts.files)
+        from(configurations.runtimeClasspath)
     }
 }
 
