@@ -17,6 +17,8 @@ home page for more details.
 > Info: Eclipse+BuildShip may need a workaround in order for this project to work,
 > please see [this vaadin thread](https://vaadin.com/forum/thread/18241436) for more info.
 
+> Looking for Maven version? Please see [vaadin14-embedded-jetty](https://github.com/mvysny/vaadin14-embedded-jetty)
+
 # Preparing Environment
 
 The Vaadin 14 build requires node.js and npm. You can either use the Vaadin Gradle plugin to install it for
