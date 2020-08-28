@@ -19,6 +19,10 @@ home page for more details.
 
 > Looking for Maven version? Please see [vaadin14-embedded-jetty](https://github.com/mvysny/vaadin14-embedded-jetty)
 
+> Note: This example project launches Jetty itself and therefore doesn't use the Gretty Gradle plugin.
+If you wish to use the Gretty plugin and build a WAR archive, then please see
+[karibu10-helloworld-app](https://github.com/mvysny/karibu10-helloworld-application) instead.
+
 # Preparing Environment
 
 The Vaadin 14 build requires node.js and npm. You can either let the Vaadin Gradle plugin to install it for
