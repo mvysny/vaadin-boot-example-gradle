@@ -21,18 +21,11 @@ home page for more details.
 
 # Preparing Environment
 
-The Vaadin 14 build requires node.js and npm. You can either use the Vaadin Gradle plugin to install it for
-you (the `vaadinPrepareNode` task, handy for the CI), or you can install it to your OS:
+The Vaadin 14 build requires node.js and npm. You can either let the Vaadin Gradle plugin to install it for
+you (this happens automatically, there is nothing for you to do), or you can install it to your OS:
 
 * Windows: [node.js Download site](https://nodejs.org/en/download/) - use the .msi 64-bit installer
 * Linux: `sudo apt install npm`
-
-To make Vaadin Gradle plugin install node.js+npm for you, just run the following command
-in the project's sources (you only need to run this command once):
-
-```
-./gradlew vaadinPrepareNode
-```
 
 Also make sure that you have Java 8 (or higher) JDK installed.
 
@@ -41,9 +34,10 @@ Also make sure that you have Java 8 (or higher) JDK installed.
 Clone this github repository and import the project to the IDE of your choice
 as a Gradle project.
 
-To run quickly from the command-line in development mode, just run `./gradlew run` -
-your app will be running on
-[http://localhost:8080](http://localhost:8080).
+To run quickly from the command-line in development mode:
+
+1. Run `./gradlew run`
+2. Your app will be running on [http://localhost:8080](http://localhost:8080).
 
 To run the app from your IDE:
 
