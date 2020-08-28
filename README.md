@@ -17,7 +17,8 @@ home page for more details.
 > **Info:** **Eclipse**+BuildShip may need a workaround in order for this project to work,
 > please see [this vaadin thread](https://vaadin.com/forum/thread/18241436) for more info.
 > This applies to **Visual Studio Code** as well since it also uses Eclipse bits and BuildShip
-> underneath.
+> underneath - see [Bug #4](https://github.com/mvysny/vaadin14-embedded-jetty-gradle/issues/4)
+> for more details.
 
 > Looking for **Maven** version? Please see [vaadin14-embedded-jetty](https://github.com/mvysny/vaadin14-embedded-jetty)
 
