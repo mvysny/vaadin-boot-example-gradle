@@ -14,9 +14,9 @@ The [Vaadin 14 Gradle Plugin](https://github.com/vaadin/vaadin-gradle-plugin)
 is used to package all JavaScript dependencies via npm+webpack. See the Plugin
 home page for more details.
 
-> **Info:** Eclipse+BuildShip may need a workaround in order for this project to work,
+> **Info:** **Eclipse**+BuildShip may need a workaround in order for this project to work,
 > please see [this vaadin thread](https://vaadin.com/forum/thread/18241436) for more info.
-> This also applies to Visual Studio Code since it also uses Eclipse bits and BuildShip
+> This applies to **Visual Studio Code** as well since it also uses Eclipse bits and BuildShip
 > underneath.
 
 > Looking for **Maven** version? Please see [vaadin14-embedded-jetty](https://github.com/mvysny/vaadin14-embedded-jetty)
