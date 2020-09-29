@@ -79,7 +79,8 @@ To build&run the zip file:
 1. `./gradle build -Pvaadin.productionMode`
 2. `cd build/distributions/`
 3. `unzip vaadin14-embedded-jetty-gradle.zip`
-4. `./run`
+4. `cd vaadin14-embedded-jetty-gradle/bin`
+5. `./vaadin14-embedded-jetty-gradle`
 
 Head to [localhost:8080/](http://localhost:8080).
 

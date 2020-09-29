@@ -46,18 +46,6 @@ test {
     }
 }
 
-def zip = task zip(type: Zip) {
-    from("src/main/scripts")
-    into("libs") {
-        from(configurations.runtimeClasspath.allArtifacts.files)
-        from(configurations.runtimeClasspath)
-    }
-}
-
-artifacts {
-    archives(zip)
-}
-
 application {
     mainClassName = "com.vaadin.starter.skeleton.ManualJetty"
 }

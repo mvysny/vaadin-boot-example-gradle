@@ -1,5 +1,0 @@
-#!/bin/bash
-set -e -o pipefail
-CP=`ls libs/*.jar|tr '\n' ':'`
-java -cp $CP com.vaadin.starter.skeleton.ManualJetty "$@"
-
