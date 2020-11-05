@@ -37,7 +37,7 @@ dependencies {
     implementation("org.slf4j:slf4j-simple:1.7.30")
 
     // testing
-    testCompile("com.github.mvysny.kaributesting:karibu-testing-v10:1.2.5")
+    testCompile("com.github.mvysny.kaributesting:karibu-testing-v10:1.2.6")
     testCompile("org.junit.jupiter:junit-jupiter-engine:5.7.0")
 }
 
