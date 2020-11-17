@@ -96,7 +96,7 @@ If you don't have node installed in your CI environment, you can use Vaadin plug
 To build&package this project as a docker image:
 
 1. Run `./gradlew -Pvaadin.productionMode`
-2. Run `docker build --no-cache -t test/vaadin14-embedded-jetty:latest .`. Docker will run the [Dockerfile] and build a docker image.
+2. Run `docker build --no-cache -t test/vaadin14-embedded-jetty:latest .`. Docker will run the [Dockerfile](Dockerfile) and build a docker image.
 3. Run `docker run --rm -ti -p8080:8080 test/vaadin14-embedded-jetty` to run the image
 
 Head to [localhost:8080/](http://localhost:8080).
