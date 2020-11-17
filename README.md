@@ -91,6 +91,18 @@ If you don't have node installed in your CI environment, you can use Vaadin plug
 ./gradlew clean vaadinPrepareNode build -Pvaadin.productionMode
 ```
 
+## Docker
+
+To build&package this project as a docker image:
+
+1. Run `./gradlew -Pvaadin.productionMode`
+2. Run `docker build --no-cache -t test/vaadin14-embedded-jetty:latest .`. Docker will run the [Dockerfile] and build a docker image.
+3. Run `docker run --rm -ti -p8080:8080 test/vaadin14-embedded-jetty` to run the image
+
+Head to [localhost:8080/](http://localhost:8080).
+
+If you'd like to also build the project in Docker, please see [Multi-Stage docker builds](https://mvysny.github.io/multi-stage-docker-build/).
+
 ## About The Project
 
 Let's look at all files that this project is composed of, and what are the points where you'll add functionality:
