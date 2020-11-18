@@ -1,3 +1,6 @@
+# Allows you to run this app easily in a docker image.
+# See README.md for more details.
+
 # Build stage
 FROM openjdk:11 AS BUILD
 COPY build/distributions/vaadin14-embedded-jetty-gradle.zip /app/
