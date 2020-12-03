@@ -6,7 +6,7 @@ plugins {
 
 defaultTasks("clean", "build")
 
-def jettyVersion = "9.4.33.v20201020"
+def jettyVersion = "9.4.35.v20201120"
 
 repositories {
     jcenter()
@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
     // Vaadin 14
-    implementation("com.vaadin:vaadin-core:14.4.3") {
+    implementation("com.vaadin:vaadin-core:14.4.4") {
 //         Webjars are only needed when running in Vaadin 13 compatibility mode
         ["com.vaadin.webjar", "org.webjars.bowergithub.insites",
          "org.webjars.bowergithub.polymer", "org.webjars.bowergithub.polymerelements",
