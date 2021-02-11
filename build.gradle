@@ -25,6 +25,8 @@ dependencies {
     }
 
     implementation("javax.servlet:javax.servlet-api:3.1.0")
+
+    // Embedded Jetty dependencies
     implementation("org.eclipse.jetty:jetty-continuation:${jettyVersion}")
     implementation("org.eclipse.jetty:jetty-server:${jettyVersion}")
     implementation("org.eclipse.jetty.websocket:websocket-server:${jettyVersion}")
@@ -38,7 +40,7 @@ dependencies {
     // currently we are logging through the SLF4J API to SLF4J-Simple. See src/main/resources/simplelogger.properties file for the logger configuration
     implementation("org.slf4j:slf4j-simple:1.7.30")
 
-    // testing
+    // Fast Vaadin unit-testing with Karibu-Testing: https://github.com/mvysny/karibu-testing
     testCompile("com.github.mvysny.kaributesting:karibu-testing-v10:1.2.10")
     testCompile("org.junit.jupiter:junit-jupiter-engine:5.7.0")
 }
