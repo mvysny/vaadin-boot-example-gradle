@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
     // Vaadin 14
-    implementation("com.vaadin:vaadin-core:14.4.7") {
+    implementation("com.vaadin:vaadin-core:14.4.10") {
 //         Webjars are only needed when running in Vaadin 13 compatibility mode
         ["com.vaadin.webjar", "org.webjars.bowergithub.insites",
          "org.webjars.bowergithub.polymer", "org.webjars.bowergithub.polymerelements",
@@ -41,7 +41,7 @@ dependencies {
     implementation("org.slf4j:slf4j-simple:1.7.30")
 
     // Fast Vaadin unit-testing with Karibu-Testing: https://github.com/mvysny/karibu-testing
-    testCompile("com.github.mvysny.kaributesting:karibu-testing-v10:1.2.10")
+    testCompile("com.github.mvysny.kaributesting:karibu-testing-v10:1.2.12")
     testCompile("org.junit.jupiter:junit-jupiter-engine:5.7.0")
 }
 
