@@ -16,7 +16,7 @@ import java.net.URL;
  * Run {@link #main(String[])} to launch your app in Embedded Jetty.
  * @author mavi
  */
-public final class ManualJetty {
+public final class Main {
 
     private static Server server;
 
@@ -75,7 +75,7 @@ public final class ManualJetty {
     private static Resource findWebRoot() throws MalformedURLException {
         // don't look up directory as a resource, it's unreliable: https://github.com/eclipse/jetty.project/issues/4173#issuecomment-539769734
         // instead we'll look up the /webapp/ROOT and retrieve the parent folder from that.
-        final URL f = ManualJetty.class.getResource("/webapp/ROOT");
+        final URL f = Main.class.getResource("/webapp/ROOT");
         if (f == null) {
             throw new IllegalStateException("Invalid state: the resource /webapp/ROOT doesn't exist, has webapp been packaged in as a resource?");
         }

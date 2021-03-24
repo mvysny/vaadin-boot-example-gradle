@@ -53,7 +53,7 @@ test {
 }
 
 application {
-    mainClassName = "com.vaadin.starter.skeleton.ManualJetty"
+    mainClassName = "com.vaadin.starter.skeleton.Main"
 }
 
 vaadin {

@@ -51,12 +51,12 @@ To run the app from your IDE:
 
 1. Import the project into your IDE
 2. Run `./gradle vaadinPrepareFrontend` in the project, to configure Vaadin for npm mode.
-3. Run/Debug the `ManualJetty` class as an application (run the `main()` method).
+3. Run/Debug the `Main` class as an application (run the `main()` method).
    The app will use npm to download all javascript libraries (will take a long time)
    and will start in development mode.
 4. Your app will be running on [http://localhost:8080](http://localhost:8080).
 
-See [ManualJetty.java](src/main/java/com/vaadin/starter/skeleton/ManualJetty.java)
+See [Main.java](src/main/java/com/vaadin/starter/skeleton/Main.java)
 for details on how Jetty is configured for embedded mode.
 
 ### Missing `/src/main/webapp`?
@@ -116,7 +116,7 @@ Let's look at all files that this project is composed of, and what are the point
 | [webpack.config.js](webpack.config.js) | TODO
 | [src/main/java](src/main/java) | Place the sources of your app here.
 | [MainView.java](src/main/java/com/vaadin/starter/skeleton/MainView.java) | The main view, shown when you browse for http://localhost:8080/
-| [ManualJetty.java](src/main/java/com/vaadin/starter/skeleton/ManualJetty.java) | Launches the Embedded Jetty; just run the `main()` method.
+| [Main.java](src/main/java/com/vaadin/starter/skeleton/Main.java) | Launches the Embedded Jetty; just run the `main()` method.
 | [src/main/resources/](src/main/resources) | A bunch of static files not compiled by Java in any way; see below for explanation.
 | [simplelogger.properties](src/main/resources/simplelogger.properties) | Configures the logging engine; this demo uses the SLF4J logging library with slf4j-simple logger.
 | [src/main/webapp/](src/main/webapp) | Static web files served as-is by the web container.
