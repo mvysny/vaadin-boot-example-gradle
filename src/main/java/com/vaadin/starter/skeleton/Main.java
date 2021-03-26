@@ -20,12 +20,12 @@ public final class Main {
 
     private static Server server;
 
-    public static void main(String[] args) throws Exception {
+    public static void main(@NotNull String[] args) throws Exception {
         start(args);
         server.join();
     }
 
-    public static void start(String[] args) throws Exception {
+    public static void start(@NotNull String[] args) throws Exception {
 
         // detect&enable production mode
         if (isProductionMode()) {
