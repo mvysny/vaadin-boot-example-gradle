@@ -11,12 +11,12 @@ defaultTasks("clean", "build")
 def jettyVersion = "9.4.36.v20210114"
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
     // Vaadin 14
-    implementation("com.vaadin:vaadin-core:14.5.2") {
+    implementation("com.vaadin:vaadin-core:14.5.3") {
 //         Webjars are only needed when running in Vaadin 13 compatibility mode
         ["com.vaadin.webjar", "org.webjars.bowergithub.insites",
          "org.webjars.bowergithub.polymer", "org.webjars.bowergithub.polymerelements",
@@ -41,8 +41,8 @@ dependencies {
     implementation("org.slf4j:slf4j-simple:1.7.30")
 
     // Fast Vaadin unit-testing with Karibu-Testing: https://github.com/mvysny/karibu-testing
-    testCompile("com.github.mvysny.kaributesting:karibu-testing-v10:1.2.12")
-    testCompile("org.junit.jupiter:junit-jupiter-engine:5.7.1")
+    testImplementation("com.github.mvysny.kaributesting:karibu-testing-v10:1.2.12")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.1")
 }
 
 test {
@@ -59,4 +59,3 @@ application {
 vaadin {
     pnpmEnable = false  // workaround for https://github.com/vaadin/flow/issues/10571
 }
-
