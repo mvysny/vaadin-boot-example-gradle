@@ -8,7 +8,7 @@ defaultTasks("clean", "build")
 
 // don't use Jetty 10 - requres Java 11
 // don't use Jetty 11+ - uses jakarta.Servlet instead of javax.Servlet which makes it incompatible with Vaadin
-def jettyVersion = "9.4.36.v20210114"
+def jettyVersion = "9.4.40.v20210413"
 
 repositories {
     mavenCentral()
