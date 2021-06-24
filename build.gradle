@@ -8,7 +8,7 @@ defaultTasks("clean", "build")
 
 // don't use Jetty 10 - requres Java 11
 // don't use Jetty 11+ - uses jakarta.Servlet instead of javax.Servlet which makes it incompatible with Vaadin
-def jettyVersion = "9.4.40.v20210413"
+def jettyVersion = "9.4.41.v20210516"
 
 repositories {
     mavenCentral()
@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
     // Vaadin 14
-    implementation("com.vaadin:vaadin-core:14.6.1") {
+    implementation("com.vaadin:vaadin-core:14.6.4") {
 //         Webjars are only needed when running in Vaadin 13 compatibility mode
         ["com.vaadin.webjar", "org.webjars.bowergithub.insites",
          "org.webjars.bowergithub.polymer", "org.webjars.bowergithub.polymerelements",
