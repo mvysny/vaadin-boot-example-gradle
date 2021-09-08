@@ -26,6 +26,8 @@ public final class Main {
     }
 
     public static void start(@NotNull String[] args) throws Exception {
+        // change this to e.g. /foo to host your app on a different context root
+        final String contextRoot = "/";
 
         // detect&enable production mode
         if (isProductionMode()) {
@@ -36,7 +38,7 @@ public final class Main {
 
         final WebAppContext context = new WebAppContext();
         context.setBaseResource(findWebRoot());
-        context.setContextPath("/");
+        context.setContextPath(contextRoot);
         context.addServlet(VaadinServlet.class, "/*");
         context.setAttribute("org.eclipse.jetty.server.webapp.ContainerIncludeJarPattern", ".*\\.jar|.*/classes/.*");
         context.setConfigurationDiscovered(true);
@@ -55,7 +57,7 @@ public final class Main {
         server.start();
 
         System.out.println("\n\n=================================================\n\n" +
-        "Please open http://localhost:" + port + " in your browser\n\n" +
+        "Please open http://localhost:" + port + contextRoot + " in your browser\n\n" +
         "If you see the 'Unable to determine mode of operation' exception, just kill me and run `./gradlew vaadinPrepareFrontend`\n\n" +
         "=================================================\n\n");
     }

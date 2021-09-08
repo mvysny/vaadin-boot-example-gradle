@@ -91,6 +91,11 @@ If you don't have node installed in your CI environment, you can use Vaadin plug
 ./gradlew clean vaadinPrepareNode build -Pvaadin.productionMode
 ```
 
+## Different context root path
+
+Simply modify the `contextRoot` variable in the `Main.start()` method to, say, `"/foo"`
+to have the app running in `http://localhost:8080/foo/` instead of root context path of `http://localhost:8080/`.
+
 ## Docker
 
 To build&package this project as a docker image:
