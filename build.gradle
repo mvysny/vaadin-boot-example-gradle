@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'com.vaadin' version '0.14.8.1'
+    id 'com.vaadin' version '23.0.0.alpha2'
 }
 
 defaultTasks("clean", "build")
@@ -12,24 +12,18 @@ def jettyVersion = "9.4.43.v20210629"
 
 repositories {
     mavenCentral()
+    maven { setUrl("https://maven.vaadin.com/vaadin-prereleases") }
 }
 
 dependencies {
     // Vaadin 14
-    implementation("com.vaadin:vaadin-core:14.8.1") {
-//         Webjars are only needed when running in Vaadin 13 compatibility mode
-        ["com.vaadin.webjar", "org.webjars.bowergithub.insites",
-         "org.webjars.bowergithub.polymer", "org.webjars.bowergithub.polymerelements",
-         "org.webjars.bowergithub.vaadin", "org.webjars.bowergithub.webcomponents"]
-                .forEach { group -> exclude(group: group) }
-    }
-
+    implementation("com.vaadin:vaadin-core:23.0.0.alpha2")
     implementation("javax.servlet:javax.servlet-api:4.0.1")
 
     // Embedded Jetty dependencies
     implementation("org.eclipse.jetty:jetty-continuation:${jettyVersion}")
-    implementation("org.eclipse.jetty:jetty-server:${jettyVersion}")
-    implementation("org.eclipse.jetty.websocket:websocket-server:${jettyVersion}")
+    implementation("org.eclipse.jetty:jetty-webapp:${jettyVersion}")
+    implementation("org.eclipse.jetty.websocket:websocket-javax-server:${jettyVersion}")
     implementation("org.eclipse.jetty.websocket:javax-websocket-server-impl:${jettyVersion}") {
         exclude(module: "javax.websocket-client-api")
     }

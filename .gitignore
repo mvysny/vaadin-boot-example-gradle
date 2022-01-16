@@ -8,3 +8,5 @@ out
 target
 node_modules
 webpack.generated.js
+frontend/generated
+
