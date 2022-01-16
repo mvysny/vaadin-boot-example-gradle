@@ -2,7 +2,6 @@ package com.vaadin.starter.skeleton;
 
 import com.vaadin.flow.server.VaadinServlet;
 import com.vaadin.flow.server.startup.ServletContextListeners;
-import org.eclipse.jetty.annotations.AnnotationConfiguration;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.util.resource.Resource;
 import org.eclipse.jetty.webapp.*;
@@ -43,8 +42,6 @@ public final class Main {
         context.setConfigurationDiscovered(true);
         context.getServletContext().setExtendedListenerTypes(true);
         context.addEventListener(new ServletContextListeners());
-//        context.addConfiguration(new AnnotationConfiguration());
-//        WebSocketServerContainerInitializer.initialize(context); // fixes IllegalStateException: Unable to configure jsr356 at that stage. ServerContainer is null
 
         int port = 8080;
         if (args.length >= 1) {

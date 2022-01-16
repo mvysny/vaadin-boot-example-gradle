@@ -19,10 +19,8 @@ dependencies {
     implementation("com.vaadin:vaadin-core:23.0.0.alpha2") {
         exclude module: 'fusion-endpoint' // exclude fusion: it brings tons of dependencies (including swagger)
     }
-//    implementation("javax.servlet:javax.servlet-api:4.0.1")
 
     // Embedded Jetty dependencies
-//    implementation("org.eclipse.jetty:jetty-continuation:${jettyVersion}")
     implementation("org.eclipse.jetty:jetty-webapp:${jettyVersion}")
     implementation("org.eclipse.jetty.websocket:websocket-javax-server:${jettyVersion}")
 
