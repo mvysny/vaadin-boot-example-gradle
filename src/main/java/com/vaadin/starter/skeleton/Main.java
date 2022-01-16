@@ -6,7 +6,6 @@ import org.eclipse.jetty.annotations.AnnotationConfiguration;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.util.resource.Resource;
 import org.eclipse.jetty.webapp.*;
-import org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer;
 import org.jetbrains.annotations.NotNull;
 
 import java.net.MalformedURLException;
@@ -44,7 +43,8 @@ public final class Main {
         context.setConfigurationDiscovered(true);
         context.getServletContext().setExtendedListenerTypes(true);
         context.addEventListener(new ServletContextListeners());
-        WebSocketServerContainerInitializer.initialize(context); // fixes IllegalStateException: Unable to configure jsr356 at that stage. ServerContainer is null
+//        context.addConfiguration(new AnnotationConfiguration());
+//        WebSocketServerContainerInitializer.initialize(context); // fixes IllegalStateException: Unable to configure jsr356 at that stage. ServerContainer is null
 
         int port = 8080;
         if (args.length >= 1) {
@@ -52,8 +52,6 @@ public final class Main {
         }
         server = new Server(port);
         server.setHandler(context);
-        final Configuration.ClassList classlist = Configuration.ClassList.setServerDefault(server);
-        classlist.addBefore(JettyWebXmlConfiguration.class.getName(), AnnotationConfiguration.class.getName());
         server.start();
 
         System.out.println("\n\n=================================================\n\n" +
