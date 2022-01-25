@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'com.vaadin' version '23.0.0.alpha2'
+    id 'com.vaadin' version '23.0.0.alpha3'
 }
 
 defaultTasks("clean", "build")
@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
     // Vaadin 14
-    implementation("com.vaadin:vaadin-core:23.0.0.alpha2") {
+    implementation("com.vaadin:vaadin-core:23.0.0.alpha3") {
         exclude module: 'fusion-endpoint' // exclude fusion: it brings tons of dependencies (including swagger)
     }
 
