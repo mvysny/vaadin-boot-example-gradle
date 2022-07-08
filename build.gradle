@@ -7,7 +7,7 @@ plugins {
 defaultTasks("clean", "build")
 
 // don't use Jetty 11+ - uses jakarta.Servlet instead of javax.Servlet which makes it incompatible with Vaadin
-def jettyVersion = "10.0.9"
+def jettyVersion = "10.0.11"
 
 repositories {
     mavenCentral()
