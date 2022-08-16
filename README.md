@@ -21,7 +21,9 @@ home page for more details.
 > underneath - see [Bug #4](https://github.com/mvysny/vaadin14-embedded-jetty-gradle/issues/4)
 > for more details.
 
-> Looking for **Vaadin 14** version? Please see [vaadin14-embedded-jetty-gradle](https://github.com/mvysny/vaadin14-embedded-jetty-gradle)
+> Looking for **Vaadin 14 Gradle** version? Please see [vaadin14-embedded-jetty-gradle](https://github.com/mvysny/vaadin14-embedded-jetty-gradle)
+
+> Looking for **Vaadin 23 Maven** version? Please see [vaadin-embedded-jetty](https://github.com/mvysny/vaadin-embedded-jetty)
 
 > **Note:** This example project launches Jetty itself and therefore doesn't use the Gretty Gradle plugin.
 If you wish to use the Gretty plugin and build a WAR archive, then please see
