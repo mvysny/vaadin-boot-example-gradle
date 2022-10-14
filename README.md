@@ -1,7 +1,7 @@
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vaadin-flow/Lobby#?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/mvysny/vaadin14-embedded-jetty-gradle)
 
-# Vaadin npm+webpack running in Embedded Jetty using Gradle
+# Vaadin 23 running in Embedded Jetty using Gradle
 
 A demo project showing the possibility of running a Vaadin app from an
 embedded Jetty, as a simple `main()` method. Sources are in Java only.
