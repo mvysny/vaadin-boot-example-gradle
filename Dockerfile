@@ -6,7 +6,7 @@
 #
 # Uses Docker Multi-stage builds: https://docs.docker.com/build/building/multi-stage/
 
-# Build stage. Copies the entire project into the container, into the /build folder, and builds it.
+# The "Build" stage. Copies the entire project into the container, into the /vaadin-embedded-jetty-gradle/ folder, and builds it.
 FROM openjdk:11 AS BUILD
 COPY . /vaadin-embedded-jetty-gradle/
 WORKDIR /vaadin-embedded-jetty-gradle/
@@ -15,10 +15,10 @@ RUN ./gradlew -Pvaadin.productionMode
 WORKDIR /vaadin-embedded-jetty-gradle/build/distributions/
 RUN ls -la
 RUN unzip vaadin-embedded-jetty-gradle.zip
-# At this stage, we have the app (executable bash scrip plus a bunch of jars) in the
+# At this point, we have the app (executable bash scrip plus a bunch of jars) in the
 # /vaadin-embedded-jetty-gradle/build/distributions/vaadin-embedded-jetty-gradle/ folder.
 
-# Run stage. This creates the final clean image with just the app itself, but not gradle, npm, nor any intermediate build files.
+# The "Run" stage. Start with a clean image, and copy over just the app itself, omitting gradle, npm and any intermediate build files.
 FROM openjdk:11
 COPY --from=BUILD /vaadin-embedded-jetty-gradle/build/distributions/vaadin-embedded-jetty-gradle /app/
 WORKDIR /app/bin
