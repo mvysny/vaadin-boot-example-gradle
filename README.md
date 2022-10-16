@@ -102,9 +102,8 @@ to have the app running in `http://localhost:8080/foo/` instead of root context 
 
 To build&package this project as a docker image:
 
-1. Run `./gradlew -Pvaadin.productionMode`
-2. Run `docker build --no-cache -t test/vaadin-embedded-jetty:latest .`. Docker will run the [Dockerfile](Dockerfile) and build a docker image.
-3. Run `docker run --rm -ti -p8080:8080 test/vaadin-embedded-jetty` to run the image
+1. Run `docker build --no-cache -t test/vaadin-embedded-jetty-gradle:latest .`. Docker will run the [Dockerfile](Dockerfile) and build a docker image.
+2. Run `docker run --rm -ti -p8080:8080 test/vaadin-embedded-jetty-gradle` to run the image
 
 Head to [localhost:8080/](http://localhost:8080).
 
