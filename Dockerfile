@@ -10,8 +10,8 @@
 FROM openjdk:11 AS BUILD
 COPY . /vaadin-embedded-jetty-gradle/
 WORKDIR /vaadin-embedded-jetty-gradle/
-RUN ./gradlew clean test
-RUN ./gradlew -Pvaadin.productionMode
+RUN ./gradlew clean test --no-daemon --info --stacktrace
+RUN ./gradlew build -Pvaadin.productionMode --no-daemon --info --stacktrace
 WORKDIR /vaadin-embedded-jetty-gradle/build/distributions/
 RUN ls -la
 RUN unzip vaadin-embedded-jetty-gradle.zip
