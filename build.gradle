@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'com.vaadin' version '23.2.4'
+    id 'com.vaadin' version '23.2.5'
 }
 
 defaultTasks("clean", "build")
@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     // Vaadin
-    implementation("com.vaadin:vaadin-core:23.2.4")
+    implementation("com.vaadin:vaadin-core:23.2.5")
 
     // Embedded Jetty dependencies
     implementation("org.eclipse.jetty:jetty-webapp:${jettyVersion}")
