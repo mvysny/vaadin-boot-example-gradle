@@ -6,6 +6,8 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.util.resource.Resource;
 import org.eclipse.jetty.webapp.*;
 import org.jetbrains.annotations.NotNull;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -20,7 +22,10 @@ public final class Main {
 
     public static void main(@NotNull String[] args) throws Exception {
         start(args);
-        server.join();
+        Runtime.getRuntime().addShutdownHook(new Thread(Main::stop));
+        System.out.println("Press ENTER or CTRL+C to shutdown");
+        System.in.read();
+        stop();
     }
 
     public static void start(@NotNull String[] args) throws Exception {
@@ -51,15 +56,22 @@ public final class Main {
         server.setHandler(context);
         server.start();
 
-        System.out.println("\n\n=================================================\n\n" +
-        "Please open http://localhost:" + port + contextRoot + " in your browser\n\n" +
-        "If you see the 'Unable to determine mode of operation' exception, just kill me and run `./gradlew vaadinPrepareFrontend`\n\n" +
-        "=================================================\n\n");
+        System.out.println("\n\n=================================================\n" +
+        "Please open http://localhost:" + port + contextRoot + " in your browser\n" +
+        "If you see the 'Unable to determine mode of operation' exception, just kill me and run `./gradlew vaadinPrepareFrontend`\n" +
+        "=================================================\n");
     }
 
-    public static void stop() throws Exception {
-        server.stop();
-        server = null;
+    public static void stop() {
+        try {
+            if (server != null) {
+                server.stop();
+                log.info("Stopped");
+                server = null;
+            }
+        } catch (Throwable t) {
+            log.error("stop() failed: " + t, t);
+        }
     }
 
     private static boolean isProductionMode() {
@@ -80,11 +92,13 @@ public final class Main {
         if (!url.endsWith("/ROOT")) {
             throw new RuntimeException("Parameter url: invalid value " + url + ": doesn't end with /ROOT");
         }
-        System.err.println("/webapp/ROOT is " + f);
+        log.info("/webapp/ROOT is " + f);
 
         // Resolve file to directory
         URL webRoot = new URL(url.substring(0, url.length() - 5));
-        System.err.println("WebRoot is " + webRoot);
+        log.info("WebRoot is " + webRoot);
         return Resource.newResource(webRoot);
     }
+
+    private static final Logger log = LoggerFactory.getLogger(Main.class);
 }
