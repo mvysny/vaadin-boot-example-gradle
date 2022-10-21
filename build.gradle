@@ -15,7 +15,9 @@ repositories {
 
 dependencies {
     // Vaadin
-    implementation("com.vaadin:vaadin-core:23.2.5")
+    implementation("com.vaadin:vaadin-core:23.2.5") {
+        exclude(module: "javax.annotation-api")
+    }
 
     // Embedded Jetty dependencies
     implementation("org.eclipse.jetty:jetty-webapp:${jettyVersion}")
