@@ -8,20 +8,20 @@
 
 # The "Build" stage. Copies the entire project into the container, into the /vaadin-embedded-jetty-gradle/ folder, and builds it.
 FROM openjdk:11 AS BUILD
-COPY . /vaadin-embedded-jetty-gradle/
-WORKDIR /vaadin-embedded-jetty-gradle/
+COPY . /app/
+WORKDIR /app/
 RUN ./gradlew clean test --no-daemon --info --stacktrace
 RUN ./gradlew build -Pvaadin.productionMode --no-daemon --info --stacktrace
-WORKDIR /vaadin-embedded-jetty-gradle/build/distributions/
+WORKDIR /app/build/distributions/
 RUN ls -la
-RUN unzip vaadin-embedded-jetty-gradle.zip
+RUN unzip app.zip
 # At this point, we have the app (executable bash scrip plus a bunch of jars) in the
-# /vaadin-embedded-jetty-gradle/build/distributions/vaadin-embedded-jetty-gradle/ folder.
+# /app/build/distributions/app/ folder.
 
 # The "Run" stage. Start with a clean image, and copy over just the app itself, omitting gradle, npm and any intermediate build files.
 FROM openjdk:11
-COPY --from=BUILD /vaadin-embedded-jetty-gradle/build/distributions/vaadin-embedded-jetty-gradle /app/
+COPY --from=BUILD /app/build/distributions/app /app/
 WORKDIR /app/bin
 EXPOSE 8080
-ENTRYPOINT ./vaadin-embedded-jetty-gradle
+ENTRYPOINT ./app
 
