@@ -28,14 +28,12 @@ public final class Main {
         // Unfortunately, that's not easy. When running from:
         // * Intellij as a Java app: CTRL+C doesn't work but Enter does.
         // * ./gradlew run: Enter doesn't work (no stdin); CTRL+C kills the app forcibly.
+        // * ./mvnw exec:java: both CTRL+C and Enter works properly.
         // * cmdline as an unzipped app (production): both CTRL+C and Enter works properly.
         // Therefore, we'll use a combination of the two.
 
         // this gets called both when CTRL+C is pressed, and when main() terminates.
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            log.info("Shutdown hook called, shutting down");
-            stop();
-        }));
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> stop("Shutdown hook called, shutting down")));
         System.out.println("Press ENTER or CTRL+C to shutdown");
         // Await for Enter.  ./gradlew run offers no stdin and read() will return immediately with -1
         if (System.in.read() == -1) {
@@ -43,8 +41,7 @@ public final class Main {
             System.out.println("Running from Gradle, press CTRL+C to shutdown");
             server.join(); // blocks endlessly
         } else {
-            log.info("Main: Shutting down");
-            stop();
+            stop("Main: Shutting down");
         }
     }
 
@@ -82,10 +79,11 @@ public final class Main {
         "=================================================\n");
     }
 
-    public static void stop() {
+    public static void stop(String reason) {
         try {
             if (server != null) {
-                server.stop();
+                log.info(reason);
+                server.stop(); // blocks until the webapp stops fully
                 log.info("Stopped");
                 server = null;
             }
