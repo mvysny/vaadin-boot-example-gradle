@@ -6,9 +6,6 @@ plugins {
 
 defaultTasks("clean", "build")
 
-// don't use Jetty 11+ - uses jakarta.Servlet instead of javax.Servlet which makes it incompatible with Vaadin
-def jettyVersion = "10.0.11"
-
 repositories {
     mavenCentral()
 }
@@ -19,9 +16,8 @@ dependencies {
         exclude(module: "javax.annotation-api")
     }
 
-    // Embedded Jetty dependencies
-    implementation("org.eclipse.jetty:jetty-webapp:${jettyVersion}")
-    implementation("org.eclipse.jetty.websocket:websocket-javax-server:${jettyVersion}")
+    // Vaadin-Boot
+    implementation("com.github.mvysny.vaadin-boot:vaadin-boot:10.0")
 
     implementation('org.jetbrains:annotations:22.0.0')
 
