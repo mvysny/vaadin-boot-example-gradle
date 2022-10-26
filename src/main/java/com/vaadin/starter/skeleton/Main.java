@@ -18,14 +18,34 @@ import java.net.URL;
  */
 public final class Main {
 
-    private static Server server;
+    // mark volatile: might be accessed by the shutdown hook from a different thread.
+    private volatile static Server server;
 
     public static void main(@NotNull String[] args) throws Exception {
         start(args);
-        Runtime.getRuntime().addShutdownHook(new Thread(Main::stop));
+
+        // We want to shut down the app cleanly by calling stop().
+        // Unfortunately, that's not easy. When running from:
+        // * Intellij as a Java app: CTRL+C doesn't work but Enter does.
+        // * ./gradlew run: Enter doesn't work (no stdin); CTRL+C kills the app forcibly.
+        // * cmdline as an unzipped app (production): both CTRL+C and Enter works properly.
+        // Therefore, we'll use a combination of the two.
+
+        // this gets called both when CTRL+C is pressed, and when main() terminates.
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            log.info("Shutdown hook called, shutting down");
+            stop();
+        }));
         System.out.println("Press ENTER or CTRL+C to shutdown");
-        System.in.read();
-        stop();
+        // Await for Enter.  ./gradlew run offers no stdin and read() will return immediately with -1
+        if (System.in.read() == -1) {
+            // running from Gradle
+            System.out.println("Running from Gradle, press CTRL+C to shutdown");
+            server.join(); // blocks endlessly
+        } else {
+            log.info("Main: Shutting down");
+            stop();
+        }
     }
 
     public static void start(@NotNull String[] args) throws Exception {
