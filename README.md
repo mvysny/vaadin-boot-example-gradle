@@ -12,13 +12,9 @@ demoes packaging itself into a zip file containing
 a list of jars and a runner script. See "Packaging for production" below
 for more details.
 
-> Looking for **Vaadin 14 Gradle** version? Please see [vaadin14-embedded-jetty-gradle](https://github.com/mvysny/vaadin14-embedded-jetty-gradle)
+> Looking for **Vaadin 14 Gradle** version? Please see [vaadin14-boot-example-gradle](https://github.com/mvysny/vaadin14-boot-example-gradle)
 
-> Looking for **Vaadin 23 Maven** version? Please see [vaadin-embedded-jetty](https://github.com/mvysny/vaadin-embedded-jetty)
-
-> **Note:** This example project launches Jetty itself and therefore doesn't use the Gretty Gradle plugin.
-If you wish to use the Gretty plugin and build a WAR archive, then please see
-[karibu10-helloworld-app](https://github.com/mvysny/karibu10-helloworld-application) instead.
+> Looking for **Vaadin 23 Maven** version? Please see [vaadin-boot-example-jetty](https://github.com/mvysny/vaadin-boot-example-jetty)
 
 # Documentation
 
