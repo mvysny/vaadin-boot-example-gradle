@@ -20,4 +20,3 @@ for more details.
 
 Please see the [Vaadin Boot](https://github.com/mvysny/vaadin-boot#preparing-environment) documentation
 on how you run, develop and package this Vaadin-Boot-based app.
-
