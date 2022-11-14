@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'com.vaadin' version '23.2.7'
+    id 'com.vaadin' version '23.2.8'
 }
 
 defaultTasks("clean", "build")
@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     // Vaadin
-    implementation("com.vaadin:vaadin-core:23.2.7")
+    implementation("com.vaadin:vaadin-core:23.2.8")
 
     // Vaadin-Boot
     implementation("com.github.mvysny.vaadin-boot:vaadin-boot:10.1")
