@@ -1,4 +1,4 @@
-package com.vaadin.starter.skeleton;
+package com.vaadin.starter.skeleton.services;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
