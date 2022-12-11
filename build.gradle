@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'com.vaadin' version '23.2.10'
+    id 'com.vaadin' version '23.2.11'
 }
 
 defaultTasks("clean", "build")
@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     // Vaadin
-    implementation("com.vaadin:vaadin-core:23.2.10")
+    implementation("com.vaadin:vaadin-core:23.2.11")
 
     // Vaadin-Boot
     implementation("com.github.mvysny.vaadin-boot:vaadin-boot:10.1")
@@ -21,7 +21,7 @@ dependencies {
 
     // logging
     // currently we are logging through the SLF4J API to SLF4J-Simple. See src/main/resources/simplelogger.properties file for the logger configuration
-    implementation('org.slf4j:slf4j-simple:2.0.0')
+    implementation("org.slf4j:slf4j-simple:2.0.4")
 
     // Fast Vaadin unit-testing with Karibu-Testing: https://github.com/mvysny/karibu-testing
     testImplementation("com.github.mvysny.kaributesting:karibu-testing-v23:1.3.23")
