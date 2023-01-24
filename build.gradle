@@ -15,7 +15,7 @@ dependencies {
     implementation("com.vaadin:vaadin-core:23.3.5")
 
     // Vaadin-Boot
-    implementation("com.github.mvysny.vaadin-boot:vaadin-boot:10.2")
+    implementation("com.github.mvysny.vaadin-boot:vaadin-boot:10.3")
 
     implementation('org.jetbrains:annotations:22.0.0')
 
