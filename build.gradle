@@ -12,7 +12,13 @@ repositories {
 
 dependencies {
     // Vaadin
-    implementation("com.vaadin:vaadin-core:23.3.5")
+    implementation("com.vaadin:vaadin-core:23.3.5") {
+        afterEvaluate {
+            if (vaadin.productionMode) {
+                exclude(module: "vaadin-dev-server")
+            }
+        }
+    }
 
     // Vaadin-Boot
     implementation("com.github.mvysny.vaadin-boot:vaadin-boot:10.3")
