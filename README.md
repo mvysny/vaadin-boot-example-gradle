@@ -5,7 +5,7 @@
 
 A demo project showing the possibility of running a Vaadin app from an
 embedded Jetty, as a simple `main()` method. Written in Java.
-Uses [Vaadin Boot](https://github.com/mvysny/vaadin-boot).
+Uses [Vaadin Boot](https://github.com/mvysny/vaadin-boot). Requires Java 17+.
 
 Both the development and production modes are supported. Also, the project
 demoes packaging itself into a zip file containing
