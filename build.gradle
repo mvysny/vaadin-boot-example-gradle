@@ -21,7 +21,7 @@ dependencies {
     }
 
     // Vaadin-Boot
-    implementation("com.github.mvysny.vaadin-boot:vaadin-boot:11.1")
+    implementation("com.github.mvysny.vaadin-boot:vaadin-boot:11.2")
 
     implementation('org.jetbrains:annotations:23.1.0')
 
