@@ -22,3 +22,19 @@ See the live demo at [v-herd.eu/vaadin-boot-example-gradle/](https://v-herd.eu/v
 
 Please see the [Vaadin Boot](https://github.com/mvysny/vaadin-boot#preparing-environment) documentation
 on how you run, develop and package this Vaadin-Boot-based app.
+
+# Native Mode
+
+Alpha quality. Demoes a preliminary support for [GraalVM](https://www.graalvm.org/) native mode.
+At the moment doesn't work: [Jetty #9514](https://github.com/eclipse/jetty.project/issues/9514).
+See [Vaadin Boot #10](https://github.com/mvysny/vaadin-boot/issues/10) and [Vaadin Boot: Native](https://github.com/mvysny/vaadin-boot#native)
+for more details.
+
+Quick steps:
+
+1. Install GraalVM as per https://graalvm.github.io/native-build-tools/latest/gradle-plugin-quickstart.html
+2. `git clone https://github.com/mvysny/vaadin-boot-example-gradle`
+3. `git checkout native`
+4. `./gradlew clean build nativeCompile -Pvaadin.productionMode`
+5. `cd build/native/nativeCompile/`
+6. Run the `vaadin-boot-example-gradle` binary
