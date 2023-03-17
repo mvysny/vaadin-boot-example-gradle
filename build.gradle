@@ -22,6 +22,7 @@ dependencies {
 
     // Vaadin-Boot
     implementation("com.github.mvysny.vaadin-boot:vaadin-boot:11.2")
+    implementation("org.eclipse.jetty:jetty-quickstart:11.0.14")
 
     implementation('org.jetbrains:annotations:23.1.0')
 

@@ -1,0 +1,760 @@
+[
+  {
+    "name":"[Ljava.lang.String;"
+  },
+  {
+    "name":"[Lorg.eclipse.jetty.servlet.FilterHolder;"
+  },
+  {
+    "name":"com.vaadin.starter.skeleton.AppShell",
+    "queryAllPublicConstructors":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.starter.skeleton.MainView",
+    "queryAllDeclaredMethods":true,
+    "queryAllPublicConstructors":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.fasterxml.jackson.databind.ext.Java7SupportImpl",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.flow.component.AttachNotifier",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.BlurNotifier",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.ClickEvent",
+    "queryAllPublicConstructors":true,
+    "methods":[{"name":"<init>","parameterTypes":["com.vaadin.flow.component.Component","boolean","int","int","int","int","int","int","boolean","boolean","boolean","boolean"] }]
+  },
+  {
+    "name":"com.vaadin.flow.component.ClickNotifier",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.Component",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.DetachNotifier",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.FocusNotifier",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.Focusable",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.HasComponents",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.HasElement",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.HasEnabled",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.HasOrderedComponents",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.HasSize",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.HasStyle",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.HasText",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.HasTheme",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.HtmlComponent",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.HtmlContainer",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.PollNotifier",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.UI",
+    "queryAllDeclaredMethods":true,
+    "queryAllPublicConstructors":true,
+    "methods":[
+      {"name":"<init>","parameterTypes":[] },
+      {"name":"connectClient","parameterTypes":["java.lang.String","java.lang.String","java.lang.String","java.lang.String","java.lang.String","elemental.json.JsonValue"] }
+    ]
+  },
+  {
+    "name":"com.vaadin.flow.component.WebComponentExporterFactory$DefaultWebComponentExporterFactory"
+  },
+  {
+    "name":"com.vaadin.flow.component.button.Button",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.html.H3",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.notification.Notification",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.orderedlayout.FlexComponent",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.orderedlayout.ThemableLayout",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.orderedlayout.VerticalLayout",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.shared.HasPrefix",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.shared.HasSuffix",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.shared.HasThemeVariant",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.component.shared.HasTooltip",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.di.LookupInitializer",
+    "queryAllPublicConstructors":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.flow.di.LookupInitializer$AppShellPredicateImpl",
+    "queryAllPublicConstructors":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.flow.di.LookupInitializer$ResourceProviderImpl",
+    "queryAllPublicConstructors":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.flow.di.LookupInitializer$StaticFileHandlerFactoryImpl"
+  },
+  {
+    "name":"com.vaadin.flow.router.DefaultRoutePathProvider",
+    "queryAllPublicConstructors":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.flow.router.InternalServerError"
+  },
+  {
+    "name":"com.vaadin.flow.router.RouteNotFoundError"
+  },
+  {
+    "name":"com.vaadin.flow.router.RouterLayout",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.server.VaadinServlet",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.flow.server.communication.PushAtmosphereHandler",
+    "allDeclaredFields":true
+  },
+  {
+    "name":"com.vaadin.flow.server.startup.AnnotationValidator",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.flow.server.startup.ClassLoaderAwareServletContainerInitializer",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"com.vaadin.flow.server.startup.DefaultApplicationConfigurationFactory",
+    "queryAllPublicConstructors":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.flow.server.startup.ErrorNavigationTargetInitializer",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.flow.server.startup.LookupServletContainerInitializer",
+    "queryAllPublicMethods":true,
+    "methods":[
+      {"name":"<init>","parameterTypes":[] },
+      {"name":"process","parameterTypes":["java.util.Set","jakarta.servlet.ServletContext"] }
+    ]
+  },
+  {
+    "name":"com.vaadin.flow.server.startup.RouteRegistryInitializer",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.flow.server.startup.ServletContextListeners",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.flow.server.startup.VaadinAppShellInitializer",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.flow.server.startup.VaadinServletContextStartupInitializer",
+    "methods":[{"name":"process","parameterTypes":["java.util.Set","jakarta.servlet.ServletContext"] }]
+  },
+  {
+    "name":"com.vaadin.flow.server.startup.WebComponentConfigurationRegistryInitializer",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"com.vaadin.flow.server.startup.WebComponentExporterAwareValidator",
+    "queryAllPublicMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"jakarta.inject.Inject"
+  },
+  {
+    "name":"jakarta.servlet.AsyncListener"
+  },
+  {
+    "name":"jakarta.servlet.GenericServlet",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"jakarta.servlet.http.HttpServlet",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"jakarta.websocket.Endpoint",
+    "methods":[
+      {"name":"onClose","parameterTypes":["jakarta.websocket.Session","jakarta.websocket.CloseReason"] },
+      {"name":"onError","parameterTypes":["jakarta.websocket.Session","java.lang.Throwable"] },
+      {"name":"onOpen","parameterTypes":["jakarta.websocket.Session","jakarta.websocket.EndpointConfig"] }
+    ]
+  },
+  {
+    "name":"java.io.Serializable",
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"java.lang.Boolean",
+    "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+  },
+  {
+    "name":"java.lang.Byte",
+    "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+  },
+  {
+    "name":"java.lang.Double",
+    "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+  },
+  {
+    "name":"java.lang.Float",
+    "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+  },
+  {
+    "name":"java.lang.Integer",
+    "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+  },
+  {
+    "name":"java.lang.Long",
+    "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+  },
+  {
+    "name":"java.lang.Short",
+    "methods":[{"name":"valueOf","parameterTypes":["java.lang.String"] }]
+  },
+  {
+    "name":"java.lang.management.ManagementFactory",
+    "methods":[{"name":"getRuntimeMXBean","parameterTypes":[] }]
+  },
+  {
+    "name":"java.lang.management.RuntimeMXBean",
+    "methods":[{"name":"getUptime","parameterTypes":[] }]
+  },
+  {
+    "name":"java.security.SecureRandomParameters"
+  },
+  {
+    "name":"javax.imageio.spi.ImageReaderSpi"
+  },
+  {
+    "name":"javax.imageio.spi.ImageReaderWriterSpi",
+    "methods":[
+      {"name":"getFileSuffixes","parameterTypes":[] },
+      {"name":"getFormatNames","parameterTypes":[] },
+      {"name":"getMIMETypes","parameterTypes":[] }
+    ]
+  },
+  {
+    "name":"javax.imageio.spi.ImageWriterSpi"
+  },
+  {
+    "name":"org.atmosphere.annotation.AsyncSupportListenerServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.AsyncSupportServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.AtmosphereFrameworkServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.AtmosphereHandlerServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.AtmosphereInterceptorServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.AtmosphereResourceFactoryServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.AtmosphereResourceListenerServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.AtmosphereServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.BroadcastFilterServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.BroadcasterCacheInspectorServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.BroadcasterCacheListenererviceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.BroadcasterCacheServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.BroadcasterFactoryServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.BroadcasterListenerServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.BroadcasterServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.EndpointMapperServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.ManagedServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.MeteorServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.UUIDProviderServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.WebSocketFactoryServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.WebSocketHandlerServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.WebSocketProcessorServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.annotation.WebSocketProtocolServiceProcessor"
+  },
+  {
+    "name":"org.atmosphere.cache.UUIDBroadcasterCache",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.container.JSR356AsyncSupport",
+    "methods":[{"name":"<init>","parameterTypes":["org.atmosphere.cpr.AtmosphereConfig"] }]
+  },
+  {
+    "name":"org.atmosphere.container.JSR356Endpoint"
+  },
+  {
+    "name":"org.atmosphere.cpr.AnnotationScanningServletContainerInitializer",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.cpr.AtmosphereInterceptorAdapter",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"org.atmosphere.cpr.ContainerInitializer",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.cpr.DefaultAtmosphereResourceFactory",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.cpr.DefaultAtmosphereResourceSessionFactory",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.cpr.DefaultBroadcaster",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.cpr.DefaultBroadcasterFactory",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.cpr.DefaultMetaBroadcaster",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.handler.AbstractReflectorAtmosphereHandler",
+    "allDeclaredFields":true
+  },
+  {
+    "name":"org.atmosphere.inject.AtmosphereConfigInjectable",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"org.atmosphere.inject.AtmosphereFrameworkInjectable",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"org.atmosphere.inject.AtmosphereResourceFactoryInjectable",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"org.atmosphere.inject.AtmosphereResourceSessionFactoryInjectable",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"org.atmosphere.inject.BroadcasterFactoryInjectable",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"org.atmosphere.inject.InjectIntrospectorAdapter",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"org.atmosphere.inject.MetaBroadcasterInjectable",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"org.atmosphere.inject.PostConstructIntrospector",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"org.atmosphere.inject.WebSocketFactoryInjectable",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true
+  },
+  {
+    "name":"org.atmosphere.interceptor.AndroidAtmosphereInterceptor",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.interceptor.CacheHeadersInterceptor",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.interceptor.CorsInterceptor",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.interceptor.IdleResourceInterceptor",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.interceptor.JSONPAtmosphereInterceptor",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.interceptor.JavaScriptProtocol",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.interceptor.OnDisconnectInterceptor",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.interceptor.PaddingAtmosphereInterceptor",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.interceptor.SSEAtmosphereInterceptor",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.interceptor.WebSocketMessageSuspendInterceptor",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.util.VoidAnnotationProcessor",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.atmosphere.websocket.protocol.SimpleHttpProtocol",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.annotations.AnnotationConfiguration",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.jndi.ContextFactory",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.jndi.InitialContextFactory",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.jndi.java.javaNameParser",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.jndi.java.javaURLContextFactory",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.plus.webapp.EnvConfiguration",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.plus.webapp.PlusConfiguration",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.plus.webapp.PlusDescriptorProcessor",
+    "methods":[
+      {"name":"visitEnvEntry","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitMessageDestinationRef","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitPostConstruct","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitPreDestroy","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitResourceEnvRef","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitResourceRef","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] }
+    ]
+  },
+  {
+    "name":"org.eclipse.jetty.quickstart.QuickStartConfiguration",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.quickstart.QuickStartDescriptorProcessor",
+    "methods":[
+      {"name":"visitContextParam","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitServletMapping","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] }
+    ]
+  },
+  {
+    "name":"org.eclipse.jetty.security.ConstraintSecurityHandler",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.servlet.DefaultServlet",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.servlet.NoJspServlet",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.servlet.listener.IntrospectorCleaner",
+    "allDeclaredFields":true,
+    "queryAllDeclaredMethods":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.util.TypeUtil",
+    "methods":[
+      {"name":"getClassLoaderLocation","parameterTypes":["java.lang.Class"] },
+      {"name":"getCodeSourceLocation","parameterTypes":["java.lang.Class"] },
+      {"name":"getModuleLocation","parameterTypes":["java.lang.Class"] },
+      {"name":"getSystemClassLoaderLocation","parameterTypes":["java.lang.Class"] }
+    ]
+  },
+  {
+    "name":"org.eclipse.jetty.webapp.ClassMatcher$ByLocationOrModule",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.webapp.ClassMatcher$ByPackageOrName",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.webapp.FragmentConfiguration",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.webapp.JettyWebXmlConfiguration",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.webapp.JndiConfiguration",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.webapp.MetaInfConfiguration",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.webapp.StandardDescriptorProcessor",
+    "methods":[
+      {"name":"visitContextParam","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitDefaultContextPath","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitDenyUncoveredHttpMethods","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitDisplayName","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitErrorPage","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitFilter","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitFilterMapping","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitJspConfig","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitListener","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitLocaleEncodingList","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitLoginConfig","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitMimeMapping","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitRequestCharacterEncoding","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitResponseCharacterEncoding","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitSecurityConstraint","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitSecurityRole","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitServlet","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitServletMapping","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitSessionConfig","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitTagLib","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] },
+      {"name":"visitWelcomeFileList","parameterTypes":["org.eclipse.jetty.webapp.WebAppContext","org.eclipse.jetty.webapp.Descriptor","org.eclipse.jetty.xml.XmlParser$Node"] }
+    ]
+  },
+  {
+    "name":"org.eclipse.jetty.webapp.WebAppConfiguration",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.webapp.WebInfConfiguration",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.webapp.WebXmlConfiguration",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.websocket.jakarta.client.JakartaWebSocketShutdownContainer",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.websocket.jakarta.common.JakartaWebSocketSession",
+    "methods":[{"name":"filterReturnType","parameterTypes":["java.lang.Object"] }]
+  },
+  {
+    "name":"org.eclipse.jetty.websocket.jakarta.server.config.JakartaWebSocketConfiguration",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"org.eclipse.jetty.websocket.jakarta.server.config.JakartaWebSocketServletContainerInitializer",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.java2d.marlin.DMarlinRenderingEngine",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.provider.NativePRNG",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.provider.SHA",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name":"sun.security.provider.SHA2$SHA256",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  }
+]

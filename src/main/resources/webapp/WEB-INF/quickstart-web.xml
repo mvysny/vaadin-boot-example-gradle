@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" metadata-complete="false" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="5.0">
+    <context-param>
+        <param-name>org.eclipse.jetty.containerInitializers</param-name>
+        <param-value><![CDATA[
+    "ContainerInitializer{com.vaadin.flow.server.startup.VaadinAppShellInitializer,interested=[com.vaadin.starter.skeleton.AppShell],applicable=[],annotated=[]}",
+    "ContainerInitializer{org.eclipse.jetty.websocket.jakarta.client.JakartaWebSocketShutdownContainer,interested=[],applicable=[],annotated=[]}",
+    "ContainerInitializer{com.vaadin.flow.server.startup.WebComponentConfigurationRegistryInitializer,interested=[com.vaadin.flow.component.WebComponentExporterFactory$DefaultWebComponentExporterFactory],applicable=[],annotated=[]}",
+    "ContainerInitializer{org.atmosphere.cpr.ContainerInitializer,interested=[],applicable=[],annotated=[]}",
+    "ContainerInitializer{org.eclipse.jetty.websocket.jakarta.server.config.JakartaWebSocketServletContainerInitializer,interested=[org.atmosphere.container.JSR356Endpoint],applicable=[],annotated=[]}",
+    "ContainerInitializer{com.vaadin.flow.server.startup.AnnotationValidator,interested=[],applicable=[],annotated=[]}",
+    "ContainerInitializer{com.vaadin.flow.server.startup.WebComponentExporterAwareValidator,interested=[],applicable=[],annotated=[]}",
+    "ContainerInitializer{com.vaadin.flow.server.startup.LookupServletContainerInitializer,interested=[com.vaadin.flow.di.LookupInitializer$AppShellPredicateImpl, com.vaadin.flow.di.LookupInitializer$StaticFileHandlerFactoryImpl, com.vaadin.flow.router.DefaultRoutePathProvider, com.vaadin.flow.di.LookupInitializer, com.vaadin.flow.di.LookupInitializer$ResourceProviderImpl, com.vaadin.flow.server.startup.DefaultApplicationConfigurationFactory],applicable=[],annotated=[]}",
+    "ContainerInitializer{com.vaadin.flow.server.startup.RouteRegistryInitializer,interested=[com.vaadin.starter.skeleton.MainView],applicable=[],annotated=[]}",
+    "ContainerInitializer{org.atmosphere.cpr.AnnotationScanningServletContainerInitializer,interested=[org.atmosphere.annotation.BroadcasterCacheServiceProcessor, org.atmosphere.annotation.AtmosphereHandlerServiceProcessor, org.atmosphere.annotation.BroadcasterListenerServiceProcessor, org.atmosphere.annotation.AtmosphereServiceProcessor, org.atmosphere.annotation.BroadcasterCacheListenererviceProcessor, org.atmosphere.annotation.AtmosphereFrameworkServiceProcessor, org.atmosphere.annotation.AsyncSupportListenerServiceProcessor, org.atmosphere.annotation.WebSocketFactoryServiceProcessor, org.atmosphere.annotation.BroadcasterServiceProcessor, org.atmosphere.annotation.EndpointMapperServiceProcessor, org.atmosphere.annotation.BroadcasterFactoryServiceProcessor, org.atmosphere.annotation.ManagedServiceProcessor, org.atmosphere.annotation.UUIDProviderServiceProcessor, org.atmosphere.annotation.AtmosphereResourceListenerServiceProcessor, org.atmosphere.annotation.BroadcasterCacheInspectorServiceProcessor, org.atmosphere.annotation.AtmosphereInterceptorServiceProcessor, org.atmosphere.annotation.MeteorServiceProcessor, org.atmosphere.annotation.WebSocketProtocolServiceProcessor, org.atmosphere.annotation.BroadcastFilterServiceProcessor, org.atmosphere.annotation.WebSocketProcessorServiceProcessor, org.atmosphere.annotation.AsyncSupportServiceProcessor, org.atmosphere.annotation.WebSocketHandlerServiceProcessor, org.atmosphere.annotation.AtmosphereResourceFactoryServiceProcessor],applicable=[],annotated=[]}",
+    "ContainerInitializer{com.vaadin.flow.server.startup.ErrorNavigationTargetInitializer,interested=[com.vaadin.flow.router.RouteNotFoundError, com.vaadin.flow.router.InternalServerError],applicable=[],annotated=[]}"]]></param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.eclipse.jetty.tlds</param-name>
+        <param-value><![CDATA[]]></param-value>
+    </context-param>
+    <context-param>
+        <param-name>org.eclipse.jetty.originAttribute</param-name>
+        <param-value>origin</param-value>
+    </context-param>
+    <listener origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):0">
+        <listener-class>org.eclipse.jetty.servlet.listener.IntrospectorCleaner</listener-class>
+    </listener>
+    <listener origin="@WebListener(com.vaadin.flow.server.startup.ServletContextListeners):2">
+        <listener-class>com.vaadin.flow.server.startup.ServletContextListeners</listener-class>
+    </listener>
+    <listener origin="@WebListener(com.vaadin.flow.server.startup.VaadinAppShellInitializer):3">
+        <listener-class>com.vaadin.flow.server.startup.VaadinAppShellInitializer</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>default</servlet-name>
+        <servlet-class origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):4">org.eclipse.jetty.servlet.DefaultServlet</servlet-class>
+        <init-param origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):5">
+            <param-name>dirAllowed</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):6">
+            <param-name>maxCacheSize</param-name>
+            <param-value>256000000</param-value>
+        </init-param>
+        <init-param origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):7">
+            <param-name>maxCachedFileSize</param-name>
+            <param-value>200000000</param-value>
+        </init-param>
+        <init-param origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):8">
+            <param-name>welcomeServlets</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):9">
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):10">
+            <param-name>acceptRanges</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):11">
+            <param-name>etags</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):12">
+            <param-name>maxCachedFiles</param-name>
+            <param-value>2048</param-value>
+        </init-param>
+        <init-param origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):13">
+            <param-name>redirectWelcome</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <load-on-startup>0</load-on-startup>
+        <async-supported>false</async-supported>
+    </servlet>
+    <servlet>
+        <servlet-name>jsp</servlet-name>
+        <servlet-class origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):14">org.eclipse.jetty.servlet.NoJspServlet</servlet-class>
+        <init-param origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):15">
+            <param-name>compilerTargetVM</param-name>
+            <param-value>1.8</param-value>
+        </init-param>
+        <init-param origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):16">
+            <param-name>xpoweredBy</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):17">
+            <param-name>compilerSourceVM</param-name>
+            <param-value>1.8</param-value>
+        </init-param>
+        <load-on-startup>0</load-on-startup>
+        <async-supported>false</async-supported>
+    </servlet>
+    <servlet-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):18">
+        <servlet-name>default</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):19">
+        <servlet-name>jsp</servlet-name>
+        <url-pattern>*.jsp</url-pattern>
+        <url-pattern>*.jspf</url-pattern>
+        <url-pattern>*.jspx</url-pattern>
+        <url-pattern>*.xsp</url-pattern>
+        <url-pattern>*.JSP</url-pattern>
+        <url-pattern>*.JSPF</url-pattern>
+        <url-pattern>*.JSPX</url-pattern>
+        <url-pattern>*.XSP</url-pattern>
+    </servlet-mapping>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Disable TRACE</web-resource-name>
+            <url-pattern origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):20">/</url-pattern>
+            <http-method>TRACE</http-method>
+        </web-resource-collection>
+        <auth-constraint/>
+    </security-constraint>
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Enable everything but TRACE</web-resource-name>
+            <url-pattern origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):21">/</url-pattern>
+            <http-method-omission>TRACE</http-method-omission>
+        </web-resource-collection>
+    </security-constraint>
+    <welcome-file-list>
+        <welcome-file origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):22">index.html</welcome-file>
+        <welcome-file origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):23">index.htm</welcome-file>
+        <welcome-file origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):24">index.jsp</welcome-file>
+    </welcome-file-list>
+    <locale-encoding-mapping-list>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):25">
+            <locale>de</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):26">
+            <locale>no</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):27">
+            <locale>be</locale>
+            <encoding>ISO-8859-5</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):28">
+            <locale>fi</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):29">
+            <locale>ru</locale>
+            <encoding>ISO-8859-5</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):30">
+            <locale>pt</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):31">
+            <locale>bg</locale>
+            <encoding>ISO-8859-5</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):32">
+            <locale>lt</locale>
+            <encoding>ISO-8859-2</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):33">
+            <locale>hr</locale>
+            <encoding>ISO-8859-2</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):34">
+            <locale>lv</locale>
+            <encoding>ISO-8859-2</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):35">
+            <locale>fr</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):36">
+            <locale>hu</locale>
+            <encoding>ISO-8859-2</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):37">
+            <locale>zh_TW</locale>
+            <encoding>Big5</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):38">
+            <locale>sh</locale>
+            <encoding>ISO-8859-5</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):39">
+            <locale>uk</locale>
+            <encoding>ISO-8859-5</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):40">
+            <locale>sk</locale>
+            <encoding>ISO-8859-2</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):41">
+            <locale>sl</locale>
+            <encoding>ISO-8859-2</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):42">
+            <locale>ca</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):43">
+            <locale>mk</locale>
+            <encoding>ISO-8859-5</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):44">
+            <locale>sq</locale>
+            <encoding>ISO-8859-2</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):45">
+            <locale>sr</locale>
+            <encoding>ISO-8859-5</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):46">
+            <locale>sv</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):47">
+            <locale>ko</locale>
+            <encoding>EUC-KR</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):48">
+            <locale>el</locale>
+            <encoding>ISO-8859-7</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):49">
+            <locale>en</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):50">
+            <locale>is</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):51">
+            <locale>it</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):52">
+            <locale>es</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):53">
+            <locale>iw</locale>
+            <encoding>ISO-8859-8</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):54">
+            <locale>zh</locale>
+            <encoding>GB2312</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):55">
+            <locale>et</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):56">
+            <locale>cs</locale>
+            <encoding>ISO-8859-2</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):57">
+            <locale>ar</locale>
+            <encoding>ISO-8859-6</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):58">
+            <locale>ja</locale>
+            <encoding>Shift_JIS</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):59">
+            <locale>pl</locale>
+            <encoding>ISO-8859-2</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):60">
+            <locale>da</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):61">
+            <locale>ro</locale>
+            <encoding>ISO-8859-2</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):62">
+            <locale>nl</locale>
+            <encoding>ISO-8859-1</encoding>
+        </locale-encoding-mapping>
+        <locale-encoding-mapping origin="DefaultsDescriptor(jar:file:/home/mavi/work/my/vaadin-boot/testapp/build/distributions/testapp-11.2-SNAPSHOT/lib/jetty-webapp-11.0.14.jar!/org/eclipse/jetty/webapp/webdefault.xml):63">
+            <locale>tr</locale>
+            <encoding>ISO-8859-9</encoding>
+        </locale-encoding-mapping>
+    </locale-encoding-mapping-list>
+    <session-config>
+        <session-timeout>30</session-timeout>
+        <cookie-config>
+            <name>JSESSIONID</name>
+            <http-only>false</http-only>
+            <secure>false</secure>
+            <max-age>-1</max-age>
+        </cookie-config>
+        <tracking-mode>URL</tracking-mode>
+        <tracking-mode>COOKIE</tracking-mode>
+    </session-config>
+</web-app>
