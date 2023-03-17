@@ -177,10 +177,14 @@
     "methods":[{"name":"<init>","parameterTypes":[] }]
   },
   {
-    "name":"com.vaadin.flow.router.InternalServerError"
+    "name":"com.vaadin.flow.router.InternalServerError",
+    "queryAllPublicConstructors":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
   },
   {
-    "name":"com.vaadin.flow.router.RouteNotFoundError"
+    "name":"com.vaadin.flow.router.RouteNotFoundError",
+    "queryAllPublicConstructors":true,
+    "methods":[{"name":"<init>","parameterTypes":[] }]
   },
   {
     "name":"com.vaadin.flow.router.RouterLayout",
@@ -191,6 +195,22 @@
     "allDeclaredFields":true,
     "queryAllDeclaredMethods":true,
     "methods":[{"name":"<init>","parameterTypes":[] }]
+  },
+  {
+    "name": "com.vaadin.flow.component.shared.HasClientValidation$ClientValidatedEvent",
+    "allDeclaredConstructors":true
+  },
+  {
+    "name": "com.vaadin.flow.component.KeyDownEvent",
+    "allDeclaredConstructors":true
+  },
+  {
+    "name": "com.vaadin.flow.component.KeyPressEvent",
+    "allDeclaredConstructors":true
+  },
+  {
+    "name": "com.vaadin.flow.component.KeyUpEvent",
+    "allDeclaredConstructors":true
   },
   {
     "name":"com.vaadin.flow.server.communication.PushAtmosphereHandler",
