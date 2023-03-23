@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'com.vaadin' version '24.0.0'
+    id 'com.vaadin' version '24.0.1'
 }
 
 defaultTasks("clean", "build")
@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     // Vaadin
-    implementation("com.vaadin:vaadin-core:24.0.0") {
+    implementation("com.vaadin:vaadin-core:24.0.1") {
         afterEvaluate {
             if (vaadin.productionMode) {
                 exclude(module: "vaadin-dev")
