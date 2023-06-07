@@ -3,19 +3,18 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 plugins {
     java
     application
-    id("com.vaadin") version "24.1.0.rc2"
+    id("com.vaadin") version "24.1.0"
 }
 
 defaultTasks("clean", "build")
 
 repositories {
-    maven { setUrl("https://maven.vaadin.com/vaadin-prereleases") }
     mavenCentral()
 }
 
 dependencies {
     // Vaadin
-    implementation("com.vaadin:vaadin-core:24.1.0.rc2") {
+    implementation("com.vaadin:vaadin-core:24.1.0") {
         afterEvaluate {
             if (vaadin.productionMode) {
                 exclude(module = "vaadin-dev")
