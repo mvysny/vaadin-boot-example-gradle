@@ -32,7 +32,7 @@ dependencies {
     implementation("org.slf4j:slf4j-simple:2.0.6")
 
     // Fast Vaadin unit-testing with Karibu-Testing: https://github.com/mvysny/karibu-testing
-    testImplementation("com.github.mvysny.kaributesting:karibu-testing-v24:2.0.2")
+    testImplementation("com.github.mvysny.kaributesting:karibu-testing-v24:2.1.0")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.9.2")
 }
 
