@@ -1,9 +1,16 @@
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
+buildscript {
+    // fix for https://github.com/mvysny/vaadin-boot-example-gradle/issues/3
+    dependencies {
+        classpath("com.vaadin:vaadin-prod-bundle:${project.properties["vaadinVersion"]}")
+    }
+}
+
 plugins {
     java
     application
-    id("com.vaadin") version "24.1.4"
+    id("com.vaadin")
 }
 
 defaultTasks("clean", "build")
@@ -14,7 +21,7 @@ repositories {
 
 dependencies {
     // Vaadin
-    implementation("com.vaadin:vaadin-core:24.1.4") {
+    implementation("com.vaadin:vaadin-core:${project.properties["vaadinVersion"]}") {
         afterEvaluate {
             if (vaadin.productionMode) {
                 exclude(module = "vaadin-dev")
