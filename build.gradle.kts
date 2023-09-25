@@ -41,6 +41,7 @@ dependencies {
     // Fast Vaadin unit-testing with Karibu-Testing: https://github.com/mvysny/karibu-testing
     testImplementation("com.github.mvysny.kaributesting:karibu-testing-v24:2.1.0")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.9.3")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 java {
