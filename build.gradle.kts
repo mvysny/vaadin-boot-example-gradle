@@ -18,7 +18,7 @@ dependencies {
     // Vaadin
     implementation("com.vaadin:vaadin-core:$vaadinVersion") {
         afterEvaluate {
-            if (vaadin.productionMode) {
+            if (vaadin.productionMode.get()) {
                 exclude(module = "vaadin-dev")
             }
         }
