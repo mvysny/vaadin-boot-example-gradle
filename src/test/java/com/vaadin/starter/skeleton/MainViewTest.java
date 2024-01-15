@@ -70,10 +70,10 @@ public class MainViewTest {
     @Test
     public void testGreeting() {
         // simulate an user input
-        _setValue(_get(TextField.class, spec -> spec.withCaption("Your name")), "Martin");
+        _setValue(_get(TextField.class, spec -> spec.withLabel("Your name")), "Martin");
 
         // simulate a button click as if clicked by the user
-        _click(_get(Button.class, spec -> spec.withCaption("Say hello")));
+        _click(_get(Button.class, spec -> spec.withText("Say hello")));
 
         // check that the notification has been shown
         expectNotifications("Hello Martin");
