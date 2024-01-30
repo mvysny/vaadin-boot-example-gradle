@@ -1,3 +1,4 @@
+import com.vaadin.gradle.getBooleanProperty
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
@@ -18,7 +19,8 @@ dependencies {
     // Vaadin
     implementation("com.vaadin:vaadin-core:$vaadinVersion") {
         afterEvaluate {
-            if (vaadin.productionMode.get()) {
+            // https://github.com/vaadin/flow/issues/18572
+            if (vaadin.productionMode.map { v -> getBooleanProperty("vaadin.productionMode") ?: v }.get()) {
                 exclude(module = "vaadin-dev")
             }
         }
