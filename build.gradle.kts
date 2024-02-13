@@ -4,7 +4,7 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 plugins {
     java
     application
-    id("com.vaadin")
+    alias(libs.plugins.vaadin)
 }
 
 defaultTasks("clean", "build")
@@ -13,32 +13,28 @@ repositories {
     mavenCentral()
 }
 
-val vaadinVersion: String by extra
-
 dependencies {
     // Vaadin
-    implementation("com.vaadin:vaadin-core:$vaadinVersion") {
-        afterEvaluate {
-            // https://github.com/vaadin/flow/issues/18572
-            if (vaadin.productionMode.map { v -> getBooleanProperty("vaadin.productionMode") ?: v }.get()) {
-                exclude(module = "vaadin-dev")
-            }
+    implementation(libs.vaadin.core) {
+        // https://github.com/vaadin/flow/issues/18572
+        if (vaadin.productionMode.map { v -> getBooleanProperty("vaadin.productionMode") ?: v }.get()) {
+            exclude(module = "vaadin-dev")
         }
     }
 
     // Vaadin-Boot
-    implementation("com.github.mvysny.vaadin-boot:vaadin-boot:12.2")
+    implementation(libs.vaadin.boot)
 
-    implementation("org.jetbrains:annotations:24.0.1")
+    implementation(libs.jetbrains.annotations)
 
     // logging
     // currently we are logging through the SLF4J API to SLF4J-Simple. See src/main/resources/simplelogger.properties file for the logger configuration
-    implementation("org.slf4j:slf4j-simple:2.0.11")
+    implementation(libs.slf4j.simple)
 
     // Fast Vaadin unit-testing with Karibu-Testing: https://github.com/mvysny/karibu-testing
-    testImplementation("com.github.mvysny.kaributesting:karibu-testing-v24:2.1.1")
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.9.3")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    testImplementation(libs.kaributesting)
+    testImplementation(libs.junit.jupiter.engine)
+    testRuntimeOnly(libs.junit.platform.launcher)
 }
 
 java {
