@@ -1,4 +1,3 @@
-import com.vaadin.gradle.getBooleanProperty
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
