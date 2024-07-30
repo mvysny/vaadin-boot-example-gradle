@@ -6,6 +6,8 @@ local.properties
 *.iml
 out
 target
-src/main/frontend/generated
+frontend/generated
 
 !**/src/main/dev-bundle/webapp/VAADIN/build
+vite.generated.ts
+node_modules

@@ -70,7 +70,7 @@ public class MainViewTest {
     @Test
     public void testGreeting() {
         // simulate an user input
-        _setValue(_get(TextField.class, spec -> spec.withLabel("Your name")), "Martin");
+        _setValue(_get(TextField.class, spec -> spec.withCaption("Your name")), "Martin");
 
         // simulate a button click as if clicked by the user
         _click(_get(Button.class, spec -> spec.withText("Say hello")));
