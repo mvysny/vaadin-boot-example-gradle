@@ -1,5 +1,5 @@
 # Allows you to run this app easily as a docker container.
-# See README.md for more details.
+# See README.md for more details. Requires the docker buildkit/buildx extension.
 #
 # 1. Build the image with: docker build -t test/vaadin-boot-example-gradle:latest .
 # 2. Run the image with: docker run --rm -ti -p8080:8080 test/vaadin-boot-example-gradle
