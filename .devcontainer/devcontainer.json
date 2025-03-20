@@ -1,0 +1,6 @@
+{
+	"name": "Vaadin Boot Example Gradle",
+	"dockerFile": "Dockerfile",
+	"forwardPorts": [8080],
+}
+

@@ -40,3 +40,16 @@ Quick steps:
 4. `./gradlew clean build nativeCompile -Pvaadin.productionMode`
 5. `cd build/native/nativeCompile/`
 6. Run the `vaadin-boot-example-gradle` binary
+
+# DevContainer
+
+To open this project in IDEA+Devcontainer:
+
+1. Download and install [JetBrains Gateway](https://www.jetbrains.com/remote-development/gateway/)
+2. Make sure Docker is installed on your machine
+3. Run JetBrains Gateway, then click "Dev Containers"/"New Dev Container"
+4. Select Docker, Intellij IDEA, and use this git repository: `https://github.com/mvysny/vaadin-boot-example-gradle/`
+5. Sit back and relax, this will take some time.
+6. Once IDEA opens, run the app by running the Main class
+7. Open your browser and point it towards [http://localhost:8080](http://localhost:8080)
+
