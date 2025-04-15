@@ -10,7 +10,7 @@ jetbrains-annotations = "org.jetbrains:annotations:24.1.0"
 vaadin-boot = "com.github.mvysny.vaadin-boot:vaadin-boot:13.3"
 vaadin-core = { module = "com.vaadin:vaadin-core", version.ref = "vaadin" }
 junit = "org.junit.jupiter:junit-jupiter-engine:5.11.0"
-kaributesting = "com.github.mvysny.kaributesting:karibu-testing-v24:2.2.1"
+kaributesting = "com.github.mvysny.kaributesting:karibu-testing-v24:2.2.2"
 
 [plugins]
 vaadin = { id = "com.vaadin", version.ref = "vaadin" }
