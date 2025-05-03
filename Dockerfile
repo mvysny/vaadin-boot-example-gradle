@@ -12,7 +12,6 @@ COPY . /app/
 WORKDIR /app/
 RUN --mount=type=cache,target=/root/.gradle --mount=type=cache,target=/root/.vaadin ./gradlew clean build -Pvaadin.productionMode --no-daemon --info --stacktrace
 WORKDIR /app/build/distributions/
-RUN ls -la
 RUN tar xvf app.tar
 # At this point, we have the app (executable bash scrip plus a bunch of jars) in the
 # /app/build/distributions/app/ folder.
