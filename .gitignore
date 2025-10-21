@@ -9,3 +9,10 @@ target
 src/main/frontend/generated
 
 !**/src/main/dev-bundle/webapp/VAADIN/build
+
+# Buildship-related stuff
+.project
+.classpath
+.settings
+bin
+
