@@ -16,3 +16,4 @@ src/main/frontend/generated
 .settings
 bin
 
+kls_database.db
