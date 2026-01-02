@@ -5,7 +5,7 @@
 
 A demo project showing the possibility of running a Vaadin app from an
 embedded Jetty, as a simple `main()` method. Written in Java.
-Uses [Vaadin Boot](https://github.com/mvysny/vaadin-boot). Requires Java 17+.
+Uses [Vaadin Boot](https://github.com/mvysny/vaadin-boot). Requires Java 21+.
 
 Both the development and production modes are supported. Also, the project
 demoes packaging itself into a zip file containing
@@ -14,7 +14,7 @@ for more details.
 
 > Looking for **Vaadin 14 Gradle** version? Please see [vaadin14-boot-example-gradle](https://github.com/mvysny/vaadin14-boot-example-gradle)
 
-> Looking for **Vaadin 24 Maven** version? Please see [vaadin-boot-example-maven](https://github.com/mvysny/vaadin-boot-example-maven)
+> Looking for **Vaadin Maven** version? Please see [vaadin-boot-example-maven](https://github.com/mvysny/vaadin-boot-example-maven)
 
 > Looking for **Vaadin 23 Gradle** version? Please see the [v23 branch](../../tree/v23).
 
