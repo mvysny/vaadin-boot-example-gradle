@@ -29,7 +29,7 @@ dependencies {
     implementation(libs.slf4j.simple)
 
     // Fast Vaadin unit-testing with Karibu-Testing: https://github.com/mvysny/karibu-testing
-    testImplementation(libs.kaributesting)
+    testImplementation(libs.karibu.testing)
     testImplementation(libs.junit)
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
