@@ -17,3 +17,4 @@ src/main/frontend/generated
 bin
 
 kls_database.db
+.playwright-mcp
