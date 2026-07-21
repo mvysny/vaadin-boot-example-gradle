@@ -12,7 +12,7 @@ vaadin-boot = "com.github.mvysny.vaadin-boot:vaadin-boot:13.7"
 vaadin-core = { module = "com.vaadin:vaadin-core", version.ref = "vaadin" }
 vaadin-dev = { module = "com.vaadin:vaadin-dev", version.ref = "vaadin" }
 junit = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
-karibu-testing = "com.github.mvysny.kaributesting:karibu-testing-v24:2.7.1"
+karibu-testing = "com.github.mvysny.kaributesting:karibu-testing-v24:2.7.2"
 
 [plugins]
 vaadin = { id = "com.vaadin", version.ref = "vaadin" }
